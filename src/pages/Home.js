@@ -1,10 +1,12 @@
-import React from "react";
+import { useState } from "react";
 import { v4 as uuidV4 } from "uuid";
 
 function Home() {
+  const [roomId, setRoomId] = useState("");
+  const [username, setUsername] = useState("");
   const createNewRoom = () => {
     const id = uuidV4();
-    console.log(id);
+    setRoomId(id);
   };
   return (
     <div className="homePageWrapper">
@@ -20,8 +22,20 @@ function Home() {
 
         <h4 className="mainLabel">Paste invitation ROOM ID</h4>
         <div className="inputGroup">
-          <input type="text" className="inputBox" placeholder="ROOM ID" />
-          <input type="text" className="inputBox" placeholder="USERNAME" />
+          <input
+            onChange={(e) => setRoomId(e.target.value)}
+            value={roomId}
+            type="text"
+            className="inputBox"
+            placeholder="ROOM ID"
+          />
+          <input
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+            type="text"
+            className="inputBox"
+            placeholder="USERNAME"
+          />
           <button className="btn joinBtn">Join</button>
           <span className="createInfo">
             If you don't have an invite then create &nbsp;
