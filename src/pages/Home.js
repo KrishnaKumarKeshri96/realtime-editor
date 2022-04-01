@@ -26,7 +26,7 @@ function Home() {
       </div>
       <footer>
         <h4>
-          Built with 💛 &nbsp; by &nbsp;
+          Built with 💛&nbsp; by &nbsp;
           <a href="https://github.com/KrishnaKumarKeshri96">Krishna Keshri</a>
         </h4>
       </footer>

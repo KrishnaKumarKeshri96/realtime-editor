@@ -87,3 +87,28 @@ footer a {
 .joinBtn:hover {
   background: #874356;
 }
+
+
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: #C65D7B;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  border: none;
+  background:none;
+  padding:0;
+  border-bottom: 1px solid #C65D7B;
+  cursor: pointer;
+}
+
+.createNewBtn:hover,
+footer a:hover {
+  color: #874356;
+  border-color: #874356;
+}
