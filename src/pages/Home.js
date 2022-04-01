@@ -1,6 +1,11 @@
 import React from "react";
+import { v4 as uuidV4 } from "uuid";
 
 function Home() {
+  const createNewRoom = () => {
+    const id = uuidV4();
+    console.log(id);
+  };
   return (
     <div className="homePageWrapper">
       <div className="formWrapper">
@@ -20,7 +25,9 @@ function Home() {
           <button className="btn joinBtn">Join</button>
           <span className="createInfo">
             If you don't have an invite then create &nbsp;
-            <button className="createNewBtn">new room</button>
+            <button onClick={createNewRoom} className="createNewBtn">
+              new room
+            </button>
           </span>
         </div>
       </div>
