@@ -1,14 +1,16 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Editor from "./pages/Editor";
+import EditorPage from "./pages/Editor";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <Home />
-      <Editor />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/editor/:roomId" element={<EditorPage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
