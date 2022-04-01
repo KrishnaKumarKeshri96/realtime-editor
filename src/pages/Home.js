@@ -4,7 +4,15 @@ function Home() {
   return (
     <div className="homePageWrapper">
       <div className="formWrapper">
-        <img className="homePageLogo" src="/logo1.png" alt="code-editor-logo" />
+        <div className="imgWrapper">
+          <img
+            className="homePageLogo"
+            src="/logo1.png"
+            alt="code-editor-logo"
+          />
+          <h1>| Real-time Code Editor</h1>
+        </div>
+
         <h4 className="mainLabel">Paste invitation ROOM ID</h4>
         <div className="inputGroup">
           <input type="text" className="inputBox" placeholder="ROOM ID" />
