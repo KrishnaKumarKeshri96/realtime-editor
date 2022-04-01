@@ -4,11 +4,7 @@ function Home() {
   return (
     <div className="homePageWrapper">
       <div className="formWrapper">
-        <img
-          className="homePageLogo"
-          src="/code-sync.png"
-          alt="code-sync-logo"
-        />
+        <img className="homePageLogo" src="/logo1.png" alt="code-editor-logo" />
         <h4 className="mainLabel">Paste invitation ROOM ID</h4>
         <div className="inputGroup">
           <input type="text" className="inputBox" placeholder="ROOM ID" />
