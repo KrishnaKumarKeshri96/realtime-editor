@@ -66,3 +66,24 @@ footer a {
   font-size: 16px;
   font-weight: bold;
 }
+
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn {
+  background: #C65D7B;
+  width: 100px;
+  margin-left: auto;
+}
+
+.joinBtn:hover {
+  background: #874356;
+}
