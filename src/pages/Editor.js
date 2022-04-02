@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Client from "../components/Client.jsx";
+import EditorC from "../components/Editor";
 
 function Editor() {
   const [clients, setClients] = useState([
@@ -23,7 +24,9 @@ function Editor() {
         <button className="btn copyBtn">Copy ROOM ID</button>
         <button className="btn leaveBtn">Leave</button>
       </div>
-      <div className="editorWrap"></div>
+      <div className="editorWrap">
+        <EditorC />
+      </div>
     </div>
   );
 }
