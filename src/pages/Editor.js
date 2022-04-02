@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Client from "../components/Client.jsx";
 import EditorC from "../components/Editor";
 
+import { initSocket } from "../socket";
+
 function Editor() {
+  const socketRef = useRef(null);
   const [clients, setClients] = useState([
     { socketId: 1, username: "Krishna K" },
     { socketId: 2, username: "Kumar K" },
@@ -13,6 +16,13 @@ function Editor() {
     { socketId: 1, username: "Krishna K" },
     { socketId: 2, username: "Kumar K" },
   ]);
+
+  useEffect(() => {
+    const init = async () => {
+      socketRef.current = await initSocket();
+    };
+    init();
+  }, []);
   return (
     <div className="mainWrap">
       <div className="aside">
