@@ -135,4 +135,34 @@ footer a:hover {
 
 .logo>img{
   height:100px;
+  width:100%;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+} 
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+}
+
+
+.leaveBtn {
+  width: 100%;
+  margin-top: 20px;
 }
