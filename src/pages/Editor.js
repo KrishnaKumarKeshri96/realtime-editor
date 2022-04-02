@@ -6,6 +6,12 @@ function Editor() {
   const [clients, setClients] = useState([
     { socketId: 1, username: "Krishna K" },
     { socketId: 2, username: "Kumar K" },
+    { socketId: 1, username: "Krishna K" },
+    { socketId: 2, username: "Kumar K" },
+    { socketId: 1, username: "Krishna K" },
+    { socketId: 2, username: "Kumar K" },
+    { socketId: 1, username: "Krishna K" },
+    { socketId: 2, username: "Kumar K" },
   ]);
   return (
     <div className="mainWrap">
@@ -16,8 +22,8 @@ function Editor() {
           </div>
           <h3>Connected</h3>
           <div className="clientsList">
-            {clients.map(({ socketId, username }) => (
-              <Client key={socketId} username={username} />
+            {clients.map(({ username }, i) => (
+              <Client key={i} username={username} />
             ))}
           </div>
         </div>
