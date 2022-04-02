@@ -78,13 +78,13 @@ footer a {
   transition: all 0.3s ease-in-out;
 }
 
-.joinBtn {
+.joinBtn,.leaveBtn{
   background: #C65D7B;
   width: 100px;
   margin-left: auto;
 }
 
-.joinBtn:hover {
+.joinBtn:hover,.leaveBtn:hover {
   background: #874356;
 }
 
