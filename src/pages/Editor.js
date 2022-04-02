@@ -1,18 +1,17 @@
-import { useState, useEffect, useRef } from "react";
-import Client from "../components/Client.jsx";
-import EditorC from "../components/Editor";
-
-import { initSocket } from "../socket";
+import React, { useState, useRef, useEffect } from "react";
 import toast from "react-hot-toast";
+import ACTIONS from "../Actions";
+import Client from "../components/Client";
+import Editor from "../components/Editor";
+import { initSocket } from "../socket";
 import {
   useLocation,
   useNavigate,
   Navigate,
   useParams,
 } from "react-router-dom";
-import ACTIONS from "../Actions";
 
-function Editor() {
+const EditorPage = () => {
   const socketRef = useRef(null);
   const codeRef = useRef(null);
   const location = useLocation();
@@ -86,7 +85,6 @@ function Editor() {
   if (!location.state) {
     return <Navigate to="/" />;
   }
-
   return (
     <div className="mainWrap">
       <div className="aside">
@@ -109,7 +107,7 @@ function Editor() {
         </button>
       </div>
       <div className="editorWrap">
-        <EditorC
+        <Editor
           socketRef={socketRef}
           roomId={roomId}
           onCodeChange={(code) => {
@@ -119,6 +117,6 @@ function Editor() {
       </div>
     </div>
   );
-}
+};
 
-export default Editor;
+export default EditorPage;
