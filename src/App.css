@@ -112,3 +112,27 @@ footer a:hover {
   color: #874356;
   border-color: #874356;
 }
+
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height:100vh
+
+}
+
+.aside {
+  background: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideInner {
+  flex-grow: 1;
+}
+
+.logo>img{
+  height:100px;
+}
