@@ -6,7 +6,7 @@ const ACTIONS = require("./src/Actions");
 
 const server = http.createServer(app);
 const io = new Server(server);
-
+console.log(io);
 const userSocketMap = {};
 function getAllConnectedClients(roomId) {
   // Map
