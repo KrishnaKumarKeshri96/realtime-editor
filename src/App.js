@@ -11,9 +11,11 @@ function App() {
         position="top-right"
         toastOptions={{
           success: {
-            theme: {
-              primary: "#a43c20",
-            },
+            duration: 5000,
+          },
+          style: {
+            background: "#282a36",
+            color: "#eee",
           },
         }}
       ></Toaster>
