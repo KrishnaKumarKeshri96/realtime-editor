@@ -14,8 +14,13 @@ function Home() {
     toast.success("Created a new room");
   };
   const joinRoom = () => {
-    if (roomId.trim().length !== 36 || !username.trim()) {
-      toast.error("ROOM ID & username is required");
+    if (roomId.trim().length !== 36) {
+      toast.error("Invalid Room ID");
+
+      return;
+    }
+    if (username.trim().length < 3) {
+      toast.error("Valid Username is required");
 
       return;
     }
@@ -26,6 +31,12 @@ function Home() {
         username,
       },
     });
+  };
+
+  const handleInputEnter = (e) => {
+    if (e.key === "Enter") {
+      joinRoom();
+    }
   };
   return (
     <div className="homePageWrapper">
@@ -47,8 +58,10 @@ function Home() {
             type="text"
             className="inputBox"
             placeholder="ROOM ID"
+            onKeyPress={handleInputEnter}
           />
           <input
+            onKeyPress={handleInputEnter}
             onChange={(e) => setUsername(e.target.value)}
             value={username}
             type="text"
